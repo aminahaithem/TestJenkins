@@ -1,17 +1,23 @@
 package com.sip.testJenkins.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "article")
 public class Article {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idArticle;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_article")
+	private int idArticle;
+	@Column(name = "designation")
 	private String designation;
+	@Column(name = "qte")
 	private double qte;
 	/**
 	 * 
@@ -28,18 +34,21 @@ public class Article {
 	 * @param designation
 	 * @param qte
 	 */
-	public Article(long idArticle, String designation, double qte) {
-		this.idArticle = idArticle;
+	public Article(String designation, double qte) {
+		
 		this.designation = designation;
 		this.qte = qte;
 	}
 
-	public long getIdArticle() {
+	
+	public int getIdArticle() {
 		return idArticle;
 	}
-	public void setIdArticle(long idArticle) {
+
+	public void setIdArticle(int idArticle) {
 		this.idArticle = idArticle;
 	}
+
 	public String getDesignation() {
 		return designation;
 	}

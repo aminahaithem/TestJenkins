@@ -7,6 +7,6 @@ import com.sip.testJenkins.entities.Article;
 
 
 @RepositoryRestResource
-public interface ArticleRepository extends JpaRepository<Article, Long>{
+public interface ArticleRepository extends JpaRepository<Article, Integer>{
 
 }
