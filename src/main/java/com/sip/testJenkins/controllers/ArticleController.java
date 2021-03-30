@@ -14,6 +14,7 @@ import com.sip.testJenkins.entities.Article;
 import com.sip.testJenkins.services.ArticleServices;
 
 
+
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/")
@@ -24,10 +25,10 @@ public class ArticleController {
 
 	@PostMapping(value = "articles")
 	public Article ajouterArticle(@RequestBody Article article) {
-		 article=new Article();
-		 article.setIdArticle(1);
-		article.setDesignation("A1");
-		article.setQte(10);
+//		 article=new Article();
+//		 article.setIdArticle(1);
+//		article.setDesignation("A1");
+//		article.setQte(10);
 		return articleServices.ajouterArticle(article);
 	}
 
