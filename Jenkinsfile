@@ -1,9 +1,13 @@
 pipeline
 {
+ environment{
+    JAVA_TOOL_OPTIONS="-Duesr.home=/var/maven"
+ }
  agent {
         docker {
-            image "maven:Maven_Home-jdk-8"
+            image "maven:3.0.6-jdk-8"
              label "docker"
+			 args "-v /tmp/maven:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2"
         }
   }
   stages{
