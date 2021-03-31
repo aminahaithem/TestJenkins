@@ -4,17 +4,10 @@ pipeline
   stages{
      stage("Bulid"){
       steps {
-        sh "mvn -version"
-        sh "mvn clean install"
+        sh "./mvn -version"
+        sh "./mvn clean install"
       } 
     }
   }
-  
-  post{
-    always{
-    
-    cleanWs()
-    }
-    
-  }
+ 
 }
