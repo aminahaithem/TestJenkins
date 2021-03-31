@@ -2,7 +2,7 @@ pipeline
 {
  agent {
         docker {
-            image "maven:3.6.0-jdk-8"
+            image "maven:Maven_Home-jdk-8"
              label "docker"
         }
   }
