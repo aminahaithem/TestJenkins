@@ -1,10 +1,10 @@
 pipeline
 {
-  agent {
-    docker {
-	image "maven:3.6.0-jdk-8"
-	label "dockerJenkins"
-     }
+ agent {
+        docker {
+            image "maven:Maven_Home"
+             label "docker"
+        }
   }
   stages{
      stage("Bulid"){
