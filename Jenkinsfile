@@ -1,8 +1,10 @@
 pipeline
 {
-  agent any
-  tools{
-  maven "Maven_Home"
+  agent {
+    docker {
+	image "maven:3.6.0-jdk-8"
+	label "docker"
+     }
   }
   stages{
      stage("Bulid"){
