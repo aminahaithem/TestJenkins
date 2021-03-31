@@ -3,8 +3,7 @@ pipeline
  agent {
         docker {
             image "maven:3.0.6"
-             label "docker"		
-        }
+                }
   }
   stages{
      stage("Bulid"){
