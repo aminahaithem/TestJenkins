@@ -2,7 +2,7 @@ pipeline
 {
   agent any
   tools{
-  maven "3.6.0"
+  maven "Maven_Home"
   }
   stages{
      stage("Bulid"){
