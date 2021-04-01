@@ -2,7 +2,7 @@ pipeline
 { 
  agent {
         docker {
-            image "maven:3.0.6-jdk-8-alpine"
+            image "maven:cinimex/maven-3.6.0-jdk-8-node"
 			label "docker"
                 }
   }
