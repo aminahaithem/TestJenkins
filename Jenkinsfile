@@ -2,8 +2,7 @@ pipeline
 { 
  agent {
         docker {
-            image "maven:cinimex/maven-3.6.0-jdk-8-node"
-			label "docker"
+             image 'maven:3.6.0-jdk-8'
                 }
   }
   stages{
