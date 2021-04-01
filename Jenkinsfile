@@ -1,10 +1,12 @@
-pipeline
-{ 
- agent {
+pipeline{ 
+  agent {
         docker {
              image 'maven:3.6.0-jdk-8'
                 }
   }
+  options {
+        skipStagesAfterUnstable()
+    }
   stages{
      stage("Bulid"){
       steps {
