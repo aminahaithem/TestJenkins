@@ -1,13 +1,6 @@
 pipeline{ 
-  agent {
-        docker {
-             image 'maven:3.6.0-jdk-8'
-                }
-  }
-  options {
-        skipStagesAfterUnstable()
-    }
-  stages{
+  agent {  docker {image 'maven:3.6.0'}}  
+stages{
      stage("Bulid"){
       steps {
         sh "mvn -version"
