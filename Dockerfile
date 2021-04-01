@@ -1,4 +1,4 @@
 FROM openjdk:8
 EXPOSE 8088
-ADD target/docker-jenkins-integration-sample.jar docker-jenkins-integration-sample.jar
-ENTRYPOINT ["java","-jar","/docker-jenkins-integration-sample.jar"]
+ADD target/testJenkins-testJenkins.jar testJenkins-testJenkins.war
+ENTRYPOINT ["java","-jar","/testJenkins-testJenkins.jar"]
