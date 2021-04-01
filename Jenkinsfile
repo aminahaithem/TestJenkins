@@ -1,10 +1,12 @@
 pipeline{ 
-  agent {  docker {image 'maven:3.6.0'}}  
+  agent none
 stages{
      stage("Bulid"){
+	 agent { docker "openjdk:8"}
       steps {
-        sh "mvn -version"
-        sh "mvn clean install"
+        sh "java -version"
+		sh "mvn -version"
+		sh "mvn clean install"
       } 
     }
   }
