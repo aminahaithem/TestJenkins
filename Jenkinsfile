@@ -1,17 +1,26 @@
 pipeline{ 
-  agent none
+  agent any
 stages{
      stage("Bulid"){
-	 
-	 agent {
-   	 docker "maven:3.6.0-jdk-8-alpine"
-	 }
-      steps {
+	  steps {
 	     sh "java -version"
-		sh "mvn -version"
-		cleanWs()
-		sh "mvn clean install"
+   		 sh "mvn -version"
+		 cleanWs()
+		 sh "mvn clean install"
       } 
     }
+	 stage("test"){
+      steps {
+	    sh "mvn test"
+	  }	
+	}
+	 stage("dockerImage")
+	{
+	  steps{
+        sh "docker build -f Dockerfile -t TestJenkins"
+        sh "docker run -p 8086:8086 TestJenkins"	   
+	}
+	}
+	
   }
 }
