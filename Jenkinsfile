@@ -3,10 +3,12 @@ pipeline{
 stages{
      stage("Bulid"){
 	  steps {
+	     sh "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64"
+         sh "export PATH=$PATH:$JAVA_HOME/bin"
 	     sh "java -version"
-   		 sh "export MAVEN_HOME=/opt/maven"
+   		 sh "export MAVEN_HOME=/usr/share/maven"
          sh "export PATH=$PATH:$MAVEN_HOME/bin"
-         sh "mvn --version"
+         sh "mvn -version"
 		 sh "mvn clean install"
       } 
     }
