@@ -11,7 +11,7 @@
 	<groupId>com.sip</groupId>
 	<artifactId>TestJenkins</artifactId>
 	<version>TestJenkins</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>TestJenkins</name>
 	<description>TestJenkins</description>
 	<properties>
@@ -56,6 +56,12 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+  </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -84,8 +90,7 @@
 			<plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M5</version>
-		  <configuration>
+           <configuration>
 		  <testFailureIgnore>true</testFailureIgnore>
 		  </configuration>
         </plugin>
@@ -93,8 +98,8 @@
 		<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
-				 <version>1.4.12</version>
-				<configuration>
+			
+			<!--	<configuration>
 					<repository>bennanihaythem/${project.artifactId}</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
@@ -110,11 +115,11 @@
 							<goal>push</goal>
 						</goals>
 					</execution>
-				</executions>
+				</executions>-->
 			</plugin>
 
 		</plugins>
-		<finalName>testJenkins</finalName>
+		<finalName>TestJenkins</finalName>
 	</build>
 
 </project>

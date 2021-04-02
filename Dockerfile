@@ -1,4 +1,4 @@
-FROM openjdk:8
-EXPOSE 8088
-ADD target/testJenkins.war testJenkins.war
-ENTRYPOINT ["java","-war","/testJenkins.war"]
+FROM java:8
+EXPOSE 8086
+ADD target/TestJenkins.jar TestJenkins.jar
+ENTRYPOINT ["java","-jar","/TestJenkins.jar"]
