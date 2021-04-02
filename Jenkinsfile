@@ -4,8 +4,7 @@ stages{
      stage("Bulid"){
 	  steps {
 	     sh "java -version"
-   		 sh "mvn -version"
-		 cleanWs()
+   		 cleanWs()
 		 sh "mvn clean install"
       } 
     }
