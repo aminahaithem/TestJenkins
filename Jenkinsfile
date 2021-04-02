@@ -8,6 +8,7 @@ stages{
 	     sh "java -version"
    		 sh "export MAVEN_HOME=/usr/share/maven"
          sh "export PATH=$PATH:$MAVEN_HOME/bin"
+		 sh "/usr/share/maven/bin/mvn -v"
          sh "mvn -version"
 		 sh "mvn clean install"
       } 
