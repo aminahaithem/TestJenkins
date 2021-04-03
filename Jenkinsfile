@@ -1,6 +1,6 @@
 pipeline{ 
-   agent any
-   Docker{ Dockerfile true }
+   agent{docker{ image:"Dockerfile"}}
+   
 stages{
      stage("Bulid"){
 	  steps {
