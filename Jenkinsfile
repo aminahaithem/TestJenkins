@@ -1,5 +1,6 @@
 pipeline{ 
-   agent { Dockerfile true }
+   agent any
+   Docker{ Dockerfile true }
 stages{
      stage("Bulid"){
 	  steps {
