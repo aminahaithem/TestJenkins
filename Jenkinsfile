@@ -1,5 +1,5 @@
 pipeline{ 
-   agent{docker{ image:"Dockerfile"}}
+   agent{dockerfile{ filename "Dockerfile"}}
    
 stages{
      stage("Bulid"){
