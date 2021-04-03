@@ -1,12 +1,17 @@
 pipeline{ 
-   agent{
-      dockerfile{ 
-       // filename "Dockerfile"
-		label "TestJenkins"
-	}
-}
+   agent any 
+  
    
 stages{
+ stage("buildDocker")
+   {
+   steps{    
+       dockerfile{ 
+        filename "Dockerfile"
+		label "TestJenkins"
+	}
+}}
+
      stage("Bulid"){
 	  steps {
 	     //sh "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64"
