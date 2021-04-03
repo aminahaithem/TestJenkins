@@ -1,5 +1,10 @@
 pipeline{ 
-   agent{dockerfile{ filename "Dockerfile.ci"}}
+   agent{
+      dockerfile{ 
+        filename "Dockerfile.ci"
+		label "TestJenkins"
+	}
+}
    
 stages{
      stage("Bulid"){
