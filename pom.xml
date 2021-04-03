@@ -74,11 +74,6 @@
     <version>1.4.12</version>
 </dependency>
 
-	<!-- https://mvnrepository.com/artifact/io.fabric8/docker-maven-plugin -->
-<dependency>
-    <groupId>io.fabric8</groupId>
-    <artifactId>docker-maven-plugin</artifactId>
-   </dependency>			
 	</dependencies>
 
 	<build>
