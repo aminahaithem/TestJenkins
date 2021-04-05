@@ -1,8 +1,7 @@
 pipeline {
  agent {
     dockerfile {
-        filename "Dockerfile"
-		PATH= "$PATH=./devops/"
+        //filename "Dockerfile"
 		label 'master'
     }
 }
