@@ -1,8 +1,8 @@
 pipeline {
    agent {
-      docker {
-    label "master" 
-    dockerfile true 
+     dockerfile {
+	     filename "Dockerfile"
+	     label "master"       
   }
                   
  }
