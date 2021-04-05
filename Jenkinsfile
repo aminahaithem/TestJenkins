@@ -2,7 +2,7 @@ pipeline {
  agent {
     dockerfile {
         filename "./Dockerfile"
-		ls "Dockerfile"
+		sh "cd /src"
         label 'master'
     }
 }
