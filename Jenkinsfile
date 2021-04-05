@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
     stages {
         stage("build") {
             steps {
 			   sh "java -version"
-			   sh "docker build -t TestJenkins ."
+			   echo "docker build -t TestJenkins ."
             }
         }
     }
