@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-			   sh "java -version"
-			   echo "docker build -t TestJenkins ."
+			    echo "docker build -t TestJenkins ."
             }
         }
     }
