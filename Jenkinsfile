@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "TestJenkins"}
+    agent any
     stages {
         stage("build") {
             steps {
