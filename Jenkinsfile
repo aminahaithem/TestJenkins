@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-			    echo "docker build -t TestJenkins ."
+			    sh "docker build -t TestJenkins ."
             }
         }
     }

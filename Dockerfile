@@ -1,5 +1,5 @@
 FROM java:8
-LABEL "TestJenkins"
+LABEL "master"
 RUN apt-get update  
 RUN apt-get install -y maven
 EXPOSE 8086
