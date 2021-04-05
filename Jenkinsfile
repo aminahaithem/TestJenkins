@@ -1,11 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    agent { label "linux" }
     stages {
-        stage('Build') {
+        stage("build") {
             steps {
-                 sh "java -version"
-   		         sh "mvn -version"
-		         sh "mvn clean install"
+			
+                sh "docker build -t testJenkins ."
             }
         }
     }
