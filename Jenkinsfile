@@ -1,10 +1,11 @@
 pipeline {
- agent {
-    dockerfile {
+ agent any
+ //{
+    //dockerfile {
         //filename "Dockerfile"
-		label "master"
-    }
-}
+	//	label "master"
+    //}
+//}
     stages {
         stage("build") {
             steps {
