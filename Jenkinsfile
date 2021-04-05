@@ -1,6 +1,10 @@
 pipeline {
    agent {
-       label "master"            
+      docker {
+    label "master" 
+    dockerfile true 
+  }
+                  
  }
     stages {
         stage("build") {
