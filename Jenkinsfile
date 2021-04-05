@@ -2,8 +2,7 @@ pipeline {
  agent {
     dockerfile {
         filename "./Dockerfile"
-		sh "cd /src"
-        label 'master'
+		label 'master'
     }
 }
     stages {
