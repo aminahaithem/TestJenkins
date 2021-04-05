@@ -2,11 +2,7 @@ pipeline {
    agent {
     dockerfile {
         filename 'Dockerfile'
-        dir 'build'
-        label 'docker'
-        registryUrl 'https://github.com/aminahaithem/TestJenkins'
-        registryCredentialsId 'aminahaithem'
-    }
+            }
  }
     stages {
         stage("build") {
