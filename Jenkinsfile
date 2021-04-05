@@ -7,6 +7,7 @@ pipeline {
         registryUrl 'https://github.com/aminahaithem/TestJenkins'
         registryCredentialsId 'aminahaithem'
     }
+ }
     stages {
         stage("build") {
             steps {
