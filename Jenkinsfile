@@ -2,8 +2,7 @@ pipeline {
  agent {
     dockerfile {
         filename "Dockerfile"
-		dir "build"
-        label 'master'
+		label 'master'
     }
 }
     stages {
