@@ -1,5 +1,5 @@
 FROM java:8
-LABEL "bennanihaythemesprit@gmail.com"
+LABEL "TestJenkins"
 RUN apt-get update  
 RUN apt-get install -y maven
 EXPOSE 8086
