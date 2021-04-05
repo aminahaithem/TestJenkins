@@ -1,8 +1,9 @@
 pipeline {
  agent {
     dockerfile {
-        filename "Dockerfile"
-		label 'master'
+        filename "Dockerfile.build"
+		dir "build"
+        label 'master'
     }
 }
     stages {
