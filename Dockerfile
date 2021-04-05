@@ -1,4 +1,7 @@
-FROM java:8 AS build
+FROM java:8
+LABEL "bennanihaythemesprit@gmail.com"
+RUN apt-get update  
+RUN apt-get install -y maven
 EXPOSE 8086
 ADD target/TestJenkins.jar TestJenkins.jar
 ENTRYPOINT ["java","-jar","/TestJenkins.jar"]
