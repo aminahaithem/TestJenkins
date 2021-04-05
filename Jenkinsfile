@@ -1,10 +1,10 @@
 pipeline {
-    agent { label "linux" }
+    agent any
     stages {
         stage("build") {
             steps {
-			
-                sh "docker build -t testJenkins ."
+			java -version
+			   sh "docker build -t TestJenkins ."
             }
         }
     }
