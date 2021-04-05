@@ -3,7 +3,7 @@ pipeline {
     dockerfile {
         filename 'Dockerfile'
         dir 'build'
-        label 'TestJenkins'
+        label 'docker'
         registryUrl 'https://github.com/aminahaithem/TestJenkins'
         registryCredentialsId 'aminahaithem'
     }
