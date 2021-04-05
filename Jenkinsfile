@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile true }
+    agent { docker{ image "java:8"} }
     stages {
         stage("build") {
             steps {
