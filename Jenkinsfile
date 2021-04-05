@@ -2,13 +2,13 @@ pipeline {
  agent {
     dockerfile {
         //filename "Dockerfile"
-		label 'master'
+		label "master"
     }
 }
     stages {
         stage("build") {
             steps {
-			    sh "docker build -t TestJenkins ."
+			    sh "docker build -f  Dockerfile -t TestJenkins ."
             }
         }
     }

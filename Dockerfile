@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:8
 LABEL "master"
 EXPOSE 8086
 ADD target/TestJenkins.jar TestJenkins.jar
