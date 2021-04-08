@@ -1,5 +1,4 @@
 FROM openjdk:8
-LABEL "master"
 EXPOSE 8086
-ADD target/TestJenkins.jar TestJenkins.jar
-ENTRYPOINT ["java","-jar","/TestJenkins.jar"]
+ADD target/testjenkins.jar testjenkins.jar
+ENTRYPOINT ["java","-jar","/testjenkins.jar"]
