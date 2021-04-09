@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.sip.testJenkins.controllers.ArticleController;
-import com.sip.testJenkins.entities.Article;
-import com.sip.testJenkins.services.ArticleServices;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.sip.testJenkins.*"})
@@ -20,8 +17,8 @@ public class TestJenkinsApplication implements CommandLineRunner{
 
 //	@Autowired
 //	private ArticleRepository articleRepository;
-	@Autowired
-	private ArticleServices articleController;
+//	@Autowired
+//	private ArticleServices articleController;
 	public static void main(String[] args) {
 		SpringApplication.run(TestJenkinsApplication.class, args);
 	}
