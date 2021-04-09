@@ -28,7 +28,7 @@ pipeline {
 		 
         stage("build Image") {
             steps {
-			    sh "docker build -f  Dockerfile -t TestJenkins-TestJenkins."
+			    sh "docker build -f  Dockerfile -t TestJenkins-TestJenkins ."
 				sh "docker images"
             }
         }
