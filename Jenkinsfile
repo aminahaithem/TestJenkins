@@ -25,13 +25,7 @@ pipeline {
 			
 			}
 		 }
-		 stage("Deploy"){
-		    steps{
-			 echo "Deploy"
-			 sh "mvn clean deploy package"
-			}
-		  
-		 }
+		 
         stage("build Image") {
             steps {
 			    sh "docker build -f  Dockerfile -t TestJenkins ."
