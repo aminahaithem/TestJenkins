@@ -1,4 +1,4 @@
-FROM tomcat:8.0
+FROM tomcat:9.0
 ADD target/TestJenkins-TestJenkins.war TestJenkins-TestJenkins.war
 EXPOSE 8086
 RUN rm -fr /usr/local/tomcat/webapps/
