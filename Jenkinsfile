@@ -7,10 +7,44 @@ pipeline {
     //}
 //}
     stages {
-        stage("build") {
+	    stage("Git"){
+		  steps{
+		    git "https://github.com/aminahaithem/TestJenkins.git"
+		  }
+		}
+		 stage("Install maven"){
+		    steps{
+			  echo "Installation mvn"
+			  sh "mvn clean install package"
+			}
+		 }
+		 stage("Test"){
+		    steps{
+			  echo "Test"
+			  sh "mvn test"
+			
+			}
+		 }
+		 stage("Deploy"){
+		    steps{
+			 echo "Deploy"
+			 sh "mvn clean deploy package"
+			}
+		  
+		 }
+        stage("build Image") {
             steps {
 			    sh "docker build -f  Dockerfile -t TestJenkins ."
+				sh "docker images"
             }
         }
+		
+		stage("Run image"){
+		    steps{
+			    sh "docker run -p 8086:8086 TestJenkins-TestJenkins"
+			}
+		}
+		
     }
+	
 }
