@@ -28,14 +28,14 @@ pipeline {
 		 
         stage("build Image") {
             steps {
-			    sh "docker build -f  Dockerfile -t TestJenkins-TestJenkins ."
+			    sh "docker build -f  Dockerfile -t testjenkins ."
 				sh "docker images"
             }
         }
 		
 		stage("Run image"){
 		    steps{
-			    sh "docker run -p 8086:8086 TestJenkins-TestJenkins"
+			    sh "docker run -p 8086:8086 testjenkins"
 			}
 		}
 		
