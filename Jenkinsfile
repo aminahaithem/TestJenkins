@@ -35,7 +35,7 @@ pipeline {
 		
 		stage("Run image"){
 		    steps{
-			    sh "docker run -p 8086:8080 testjenkins"
+			    sh "docker run -p 8080:8080 testjenkins"
 			}
 		}
 		
