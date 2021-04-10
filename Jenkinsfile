@@ -25,7 +25,12 @@ pipeline {
 			
 			}
 		 }
-		 
+		  stage("deploy maven") {
+            steps {
+			    sh "mvn clean install"
+				
+            }
+        }
         stage("build Image") {
             steps {
 			    sh "docker build -f  Dockerfile -t testjenkins ."
@@ -36,15 +41,10 @@ pipeline {
 		stage("Run image"){
 		    steps{
 
-			    sh "docker run -p 8080:8080 -d testjenkins"
+			    sh "docker run -p 8080:8080 -name testjenkins -link mysql-standalone:mysql -d testjenkins"
 			}
 		}
-		stage("Execut docker"){
-		    steps{
-
-			    sh "docker exec -it testjenkins bash"
-			}
-		}
+		
 		
     }
 	
