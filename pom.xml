@@ -57,10 +57,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
-<dependency>
+<!--<dependency>
     <groupId>org.apache.tomcat.embed</groupId>
     <artifactId>tomcat-embed-jasper</artifactId>
-  </dependency>
+  </dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -72,6 +72,13 @@
     <groupId>com.spotify</groupId>
     <artifactId>dockerfile-maven-plugin</artifactId>
     <version>1.4.12</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat -->
+<dependency>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat</artifactId>
+    <version>8.5.0</version>
+    <type>pom</type>
 </dependency>
 
 	</dependencies>
