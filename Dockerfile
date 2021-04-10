@@ -1,6 +1,7 @@
-FROM tomcat:8.0
-ADD target/TestJenkins-TestJenkins.war /usr/local/tomcat/webapps/
+FROM tomcat:8.5-alpine
+VOLUME /tmp
+ADD target/TestJenkins-TestJenkins.war /usr/local/tomcat/webapps/app.war
 EXPOSE 8080
-RUN rm -fr /usr/local/tomcat/webapps/
-CMD /usr/local/tomcat/bin/catalina.sh run
-COPY target/TestJenkins-TestJenkins.war /usr/local/tomcat/webapps/
+COPY target/TestJenkins-TestJenkins.war /usr/local/tomcat/webapps/app.war
+RUNsh -c 'touch /usr/local/tomcat/webapps/app.war'
+ENTRYPOINT ["sh" ,"-c","java -Djava.security.edg=file:/dev/./urandon -jar /usr/local/tomcat/webapps/app.war"]
