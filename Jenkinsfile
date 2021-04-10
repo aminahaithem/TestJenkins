@@ -35,7 +35,14 @@ pipeline {
 		
 		stage("Run image"){
 		    steps{
+
 			    sh "docker run -p 8080:8080 testjenkins"
+			}
+		}
+		stage("Execut docker"){
+		    steps{
+
+			    sh "docker exec -it testjenkins"
 			}
 		}
 		
