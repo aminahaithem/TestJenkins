@@ -42,7 +42,7 @@ pipeline {
 		stage("Execut docker"){
 		    steps{
 
-			    sh "docker exec -it testjenkins"
+			    sh "docker exec -it testjenkins bash"
 			}
 		}
 		
