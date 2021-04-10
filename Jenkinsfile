@@ -15,7 +15,7 @@ pipeline {
 		 stage("Install maven"){
 		    steps{
 			  echo "Installation mvn"
-			  sh "mvn clean install package"
+			  sh "mvn clean compile"
 			}
 		 }
 		 stage("Test"){
@@ -27,7 +27,7 @@ pipeline {
 		 }
 		  stage("deploy maven") {
             steps {
-			    sh "mvn clean install"
+			    sh "mvn clean install package"
 				
             }
         }
@@ -41,7 +41,7 @@ pipeline {
 		stage("Run image"){
 		    steps{
 
-			    sh "docker run -p 8080:8080 -name testjenkins -link mysql-standalone:mysql -d testjenkins"
+			    sh "docker run -p 8080:8080 -d testjenkins"
 			}
 		}
 		
