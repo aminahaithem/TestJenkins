@@ -35,7 +35,7 @@ public class ArticleController {
 	}
     
 	@Timed(
-			value= "techprimers.hello.request",
+			value= "getArticles",
 			histogram= true,
 			percentiles= {0.95,0.99},
 			extraTags= {"version","1.0"}
