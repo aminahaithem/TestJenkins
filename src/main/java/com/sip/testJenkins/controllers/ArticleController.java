@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sip.testJenkins.entities.Article;
 import com.sip.testJenkins.services.ArticleServices;
 
+import io.micrometer.core.annotation.Timed;
+
 
 
 @RestController
@@ -31,7 +33,13 @@ public class ArticleController {
 //		article.setQte(10);
 		return articleServices.ajouterArticle(article);
 	}
-
+    
+	@Timed(
+			value= "techprimers.hello.request",
+			histogram= true,
+			percentiles= {0.95,0.99},
+			extraTags= {"version","1.0"}
+			)
 	@GetMapping(value = "articles")
 	public List<Article> findArticle() {
 		return articleServices.findArticle();
