@@ -1,5 +1,5 @@
 FROM tomcat:8.5-alpine
-EXPOSE 8081
+EXPOSE 8080
 #VOLUME /tmp
 ADD target/TestJenkins-TestJenkins.war /usr/local/tomcat/webapps/TestJenkins-TestJenkins.war
 #COPY target/TestJenkins-TestJenkins.war /usr/local/tomcat/webapps/TestJenkins-TestJenkins.war
