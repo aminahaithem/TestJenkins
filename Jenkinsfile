@@ -1,51 +1,51 @@
-pipeline {
- agent any
- //{
-    //dockerfile {
-        //filename "Dockerfile"
-	//	label "master"
-    //}
-//}
+pipeline
+{
+    agent any
     stages {
-	    stage("Git"){
-		  steps{
-		    git "https://github.com/aminahaithem/TestJenkins.git"
-		  }
-		}
-		 stage("Install maven"){
-		    steps{
-			  echo "Installation mvn"
-			  sh "mvn clean compile"
-			}
-		 }
-		 stage("Test"){
-		    steps{
-			  echo "Test"
-			  sh "mvn test"
-			
-			}
-		 }
-		  stage("deploy maven") {
-            steps {
-			    sh "mvn clean install package"
-				
+        stage("Git")
+        {
+            steps{
+              git "https://github.com/aminahaithem/TestJenkins.git"  
+            }
+           
+        }
+        stage("compile")
+        {
+            steps{
+                sh "mvn clean compile"
             }
         }
-        stage("build Image") {
-            steps {
-			    sh "docker build -f  Dockerfile -t testjenkins ."
-				sh "docker images"
+        stage("test")
+        {
+            steps{
+                sh "mvn test"
             }
         }
-		
-		stage("Run image"){
-		    steps{
-
-			    sh "docker run -p 8080:8080 -d testjenkins"
-			}
-		}
-		
-		
+        stage("install")
+        {
+            steps{
+                sh "mvn clean install package"
+            }
+        }
+        stage("Build docker")
+        {
+            steps{
+                sh "docker build -f Dockerfile -t testjenkins ."
+            }
+        }
+        stage("run docker")
+        {
+            steps{
+                sh "docker run -p 8080:8080 -d testjenkins"
+            }
+            post{
+                success{
+                    archiveArtifacts "target/*.war"
+                }
+            }
+           
+        }
+       
     }
-	
+   
 }
