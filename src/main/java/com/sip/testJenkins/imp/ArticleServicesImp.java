@@ -28,6 +28,12 @@ public class ArticleServicesImp implements ArticleServices{
 		// TODO Auto-generated method stub
 		return articleRepository.findAll();
 	}
+
+	@Override
+	public Article findArticleById(int idArticle) {
+		// TODO Auto-generated method stub
+		return articleRepository.findArticleByIdArticle(1);
+	}
 	
 
 }

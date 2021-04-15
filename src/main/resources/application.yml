@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ARTICLE
+server:
+  port: 8080
+logging:
+  file:
+    path: /home/devops/devops/articles.log
