@@ -18,9 +18,9 @@ import com.sip.testJenkins.services.ArticleServices;
 
 
 @SpringBootApplication
-//@ComponentScan(basePackages = {"com.sip.testJenkins.*"})
-//@EntityScan(basePackages = {"com.sip.testJenkins.*"})
-//@EnableJpaRepositories(basePackages = {"com.sip.testJenkins.*"})
+@ComponentScan(basePackages = {"com.sip.testJenkins.*"})
+@EntityScan(basePackages = {"com.sip.testJenkins.*"})
+@EnableJpaRepositories(basePackages = {"com.sip.testJenkins.*"})
 public class TestJenkinsApplication implements CommandLineRunner{
 
 	@Autowired
