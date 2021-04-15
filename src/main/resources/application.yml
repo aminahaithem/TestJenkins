@@ -5,4 +5,4 @@ server:
   port: 8080
 logging:
   file:
-    path: /home/devops/devops/articles.log
+    path: /home/devops/devops/logs/articles.log
