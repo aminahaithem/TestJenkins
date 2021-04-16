@@ -5,7 +5,7 @@ server:
   port: 8080
 logging:
   file:
-    path: /home/devops/devops/logs/articles.log
+    path: /var/lib/jenkins/workspace/TestJenkins/logs/articles.log
   level:
     com.sip.testJenkins: INFO
   pattern:
