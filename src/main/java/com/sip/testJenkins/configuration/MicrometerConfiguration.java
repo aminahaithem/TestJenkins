@@ -12,16 +12,16 @@ import io.micrometer.core.instrument.MeterRegistry;
 //import io.micrometer.core.instrument.MeterRegistry;
 //import io.micrometer.spring.autoconfigure.MeterRegistryCustomizer;
 
-@Configuration
+//@Configuration
 public class MicrometerConfiguration {
 
-    @Bean
-	MeterRegistryCustomizer<MeterRegistry> meterRegistryCustomizer(MeterRegistry meterRegistry)
-	{
-		return meterRegistry1->{
-			meterRegistry.config()
-			.commonTags("testjenkins","articles-exemple");
-			
-		};
-	}
+   // @Bean
+//	MeterRegistryCustomizer<MeterRegistry> meterRegistryCustomizer(MeterRegistry meterRegistry)
+//	{
+//		return meterRegistry1->{
+//			meterRegistry.config()
+//			.commonTags("testjenkins","articles-exemple");
+//			
+//		};
+//	}
 }

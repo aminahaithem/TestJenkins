@@ -6,3 +6,10 @@ server:
 logging:
   file:
     path: /home/devops/devops/logs/articles.log
+  level:
+    com.sip.testJenkins: INFO
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green}"
+ 
+  
+    

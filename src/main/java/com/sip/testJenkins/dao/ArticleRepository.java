@@ -7,9 +7,12 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.sip.testJenkins.entities.Article;
 
+//import com.sip.testjenkins.entities.Article;
+
 
 @RepositoryRestResource
-public interface ArticleRepository extends JpaRepository<Article, Integer>{
+public interface ArticleRepository extends JpaRepository<Article, Integer>
+{
 
 	@Query("Select a From Article a Where a.idArticle=:idArticle")
 	Article findArticleByIdArticle(@Param(value = "idArticle")int idArticle);
